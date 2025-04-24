@@ -42,7 +42,7 @@ Full series playlist: [ADK Made Simple Playlist](https://www.youtube.com/playlis
 
 4.  **Agent-Specific Setup:** Navigate to the specific agent's directory within `agents/` and follow the instructions in its `README.md` (or follow the steps below for the default agent).
 
-## Reddit Scout - Setup & Running
+## Setup & Running Agents
 
 1.  **Navigate to Agent Directory:**
 
