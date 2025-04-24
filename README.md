@@ -1,7 +1,15 @@
 # ADK Made Simple - Agent Examples
 
-This project demonstrates simple agents built using the Google Agent Development Kit (ADK).
-Currently, it contains one agent: "Reddit Scout".
+This project demonstrates simple agents built using the Google Agent Development Kit (ADK). It accompanies the YouTube tutorial series "ADK Made Simple" hosted on the [AIOriented YouTube channel](https://www.youtube.com/@AIOriented).
+
+Full series playlist: [ADK Made Simple Playlist](https://www.youtube.com/playlist?list=PLWUH7ke1DYK98Di2FF8Ux3IX6qG-mZ3A7)
+
+## Lessons
+
+| Lesson | Link | Description |
+| ------ | ---- | ----------- |
+| 1      | [Lesson 1: Basics of ADK & Reddit Scout Agent](https://www.youtube.com/watch?v=BiP4tKZKTvU) | Basics of ADK, Building a Reddit news agent with PRAW |
+| 2      | [Lesson 2: Multi-Agent Systems & TTS](https://www.youtube.com/watch?v=FODBW9az-sw) | Combining ADK with MCP, Multi-Agent Systems, Text-To-Speech with ElevenLabs, LiteLLM |
 
 ## Agents
 
@@ -12,7 +20,7 @@ Currently, it contains one agent: "Reddit Scout".
 1.  **Clone the repository:**
 
     ```bash
-    git clone <your-repo-url>
+    git clone https://github.com/chongdashu/adk-made-simple
     cd adk-made-simple
     ```
 
@@ -63,7 +71,12 @@ Currently, it contains one agent: "Reddit Scout".
       ```
     - Alternatively, from the project root (`adk-made-simple`), you might be able to run:
       ```bash
-      adk run agents.reddit_scout
+      adk run agents/reddit_scout
+      ```
+      _(Check ADK documentation for preferred discovery method)_
+    - Asynchronous agents can only be run from the web view, so first `cd` into the `agents` directory and run 
+      ```bash
+      adk web
       ```
       _(Check ADK documentation for preferred discovery method)_
 
@@ -76,10 +89,21 @@ Currently, it contains one agent: "Reddit Scout".
 ```
 adk-made-simple/
 ├── agents/
-│   └── reddit_scout/        # Reddit Scout Agent
+│   ├── reddit_scout/        # Lesson 1: Reddit Scout Agent
+│   │   ├── __init__.py
+│   │   └── agent.py
+│   ├── async_reddit_scout/  # Lesson 2: Asynchronous Reddit Scout Agent
+│   │   ├── __init__.py
+│   │   └── agent.py
+│   ├── summarizer/          # Lesson 2: Newscaster Summarizer Agent
+│   │   ├── __init__.py
+│   │   └── agent.py
+│   ├── speaker/             # Lesson 2: Speaker Agent
+│   │   ├── __init__.py
+│   │   └── agent.py
+│   └── coordinator/         # Lesson 2: Coordinator Agent combining sub-agents
 │       ├── __init__.py
 │       └── agent.py
-├── .venv/                   # Virtual environment directory
 ├── .env.example             # Environment variables example
 ├── .gitignore               # Root gitignore file
 ├── requirements.txt         # Project dependencies
