@@ -41,7 +41,7 @@ def setup_google_credentials():
 credentials_available = setup_google_credentials()
 
 # Ensure parent directory is in sys.path for package imports
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(_file_), '..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 # Import your agents (with error handling for deployment)
 try:
